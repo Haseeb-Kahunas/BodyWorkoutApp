@@ -29,7 +29,7 @@ struct BodyModelView: View {
                 HStack {
                     Spacer()
                     
-                    VStack(spacing: 10) {
+                    VStack(spacing: 8) {
                         // Zoom In Button
                         Button(action: {
                             withAnimation(.spring(response: 0.3)) {
@@ -37,24 +37,24 @@ struct BodyModelView: View {
                             }
                         }) {
                             Image(systemName: "plus.circle.fill")
-                                .font(.system(size: 44))
+                                .font(.system(size: 22))
                                 .foregroundColor(.white)
                                 .background(
                                     Circle()
                                         .fill(Color.black.opacity(0.6))
-                                        .frame(width: 50, height: 50)
+                                        .frame(width: 25, height: 25)
                                 )
                         }
                         
                         // Current Zoom Level
                         Text("\(Int(zoomLevel * 100))%")
-                            .font(.caption)
+                            .font(.system(size: 9))
                             .fontWeight(.bold)
                             .foregroundColor(.white)
-                            .padding(.horizontal, 8)
-                            .padding(.vertical, 4)
+                            .padding(.horizontal, 6)
+                            .padding(.vertical, 2)
                             .background(Color.black.opacity(0.6))
-                            .cornerRadius(8)
+                            .cornerRadius(6)
                         
                         // Zoom Out Button
                         Button(action: {
@@ -63,12 +63,12 @@ struct BodyModelView: View {
                             }
                         }) {
                             Image(systemName: "minus.circle.fill")
-                                .font(.system(size: 44))
+                                .font(.system(size: 22))
                                 .foregroundColor(.white)
                                 .background(
                                     Circle()
                                         .fill(Color.black.opacity(0.6))
-                                        .frame(width: 50, height: 50)
+                                        .frame(width: 25, height: 25)
                                 )
                         }
                         
@@ -79,16 +79,16 @@ struct BodyModelView: View {
                             }
                         }) {
                             Image(systemName: "arrow.counterclockwise.circle.fill")
-                                .font(.system(size: 36))
+                                .font(.system(size: 18))
                                 .foregroundColor(.white)
                                 .background(
                                     Circle()
                                         .fill(Color.black.opacity(0.6))
-                                        .frame(width: 42, height: 42)
+                                        .frame(width: 21, height: 21)
                                 )
                         }
                     }
-                    .padding(.trailing, 20)
+                    .padding(.trailing, 10)
                 }
                 .padding(.top, 20)
                 
